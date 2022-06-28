@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "622c1d6f-3cdc-4f77-a7da-fc7eee92c0ca",
+		"name": "LOCAL POC B2C",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"displayName\":\"Kawaguchi\",\r\n    \"givenName\":\"Kawaguchiko San\",\r\n    \"mailNickname\":\"kawa_san\",\r\n    \"userPrincipalName\":\"kawa_san@testEnvironmentLogin.onmicrosoft.com\",\r\n    \"password\":\"tonariNoTotoro007\",\r\n    \"customAtt\" : {\r\n        \"attName\" : \"Teste Kawa Power\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/b2c/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"b2c",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/b2c/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"b2c",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/b2c/users/72a84810-b098-49d8-b514-32670a35df1e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"b2c",
+								"users",
+								"72a84810-b098-49d8-b514-32670a35df1e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"givenName\":\"Mina Ashido\",\r\n    \"displayName\": \"pinky\",\r\n    \"mailNickname\": \"pinky\",\r\n    \"userPrincipalName\": \"pinky@testEnvironmentLogin.onmicrosoft.com\",\r\n    \"mail\" : \"legal@bakapower.com\",\r\n    \"otherMails\" : [\r\n        \"aleatorio@bakapower.com\",\"bobo@bakapower.com\",\"falso@bakapower.com\",\"semligamento@bakapower.com\"\r\n    ],\r\n    \"customAtt\" : {\r\n        \"attName\" : \"Acid Veil\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/b2c/users/98ec992f-0231-4703-8668-9a5fa5d92168",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"b2c",
+								"users",
+								"98ec992f-0231-4703-8668-9a5fa5d92168"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"givenName\":\"Mina Ashido\",\r\n    \"displayName\": \"pinky\",\r\n    \"mailNickname\": \"pinky\",\r\n    \"userPrincipalName\": \"pinky@testEnvironmentLogin.onmicrosoft.com\",\r\n    \"mail\" : \"legal@bakapower.com\",\r\n    \"otherMails\" : [\r\n        \"aleatorio@bakapower.com\",\"bobo@bakapower.com\",\"falso@bakapower.com\",\"semligamento@bakapower.com\"\r\n    ],\r\n    \"customAtt\" : {\r\n        \"attName\" : \"Acid Veil\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/b2c/users/199e65e0-7482-43d1-be6a-ceddce86d6ef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"b2c",
+								"users",
+								"199e65e0-7482-43d1-be6a-ceddce86d6ef"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Identities",
+			"item": [
+				{
+					"name": "Create Identity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"signInType\": \"federated\",\r\n    \"issuer\": \"google.com\",\r\n    \"issuerAssignedId\": \"111627302700590493336\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/b2c/identities/98ec992f-0231-4703-8668-9a5fa5d92168",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"b2c",
+								"identities",
+								"98ec992f-0231-4703-8668-9a5fa5d92168"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Identity",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"signInType\": \"federated\",\r\n    \"issuer\": \"google.com\",\r\n    \"issuerAssignedId\": \"111627302700590493336\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/b2c/identities/98ec992f-0231-4703-8668-9a5fa5d92168",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"b2c",
+								"identities",
+								"98ec992f-0231-4703-8668-9a5fa5d92168"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step-Up Link Simulation B2C - Next",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImNVR2pLTjFaZS05Y3VvVTRqN2xnOFRrbHZhNFN4RHVKMlVQYWJaZk5vTHcifQ.eyJleHAiOjE2NTM5MjkzMzcsIm5iZiI6MTY1MzkyNTczNywidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly90ZXN0ZW52aXJvbm1lbnRsb2dpbi5iMmNsb2dpbi5jb20vZjc2YjM5NGItMWE5My00YzgxLWE3YjEtOTI5YTA0NmQ2OWFjL3YyLjAvIiwic3ViIjoiNzJhODQ4MTAtYjA5OC00OWQ4LWI1MTQtMzI2NzBhMzVkZjFlIiwiYXVkIjoiNjYxNTg3M2QtODlmMy00ODZmLTkyNTAtYTE4MGIyMTg1YTJjIiwiYWNyIjoiYjJjXzFhX3NvY2lhbF9yZXN0X3NpZ251cF9zaWduaW4iLCJub25jZSI6ImRlZmF1bHROb25jZSIsImlhdCI6MTY1MzkyNTczNywiYXV0aF90aW1lIjoxNjUzOTI1NzM3LCJnaXZlbl9uYW1lIjoiQmFyYmFyYSIsImZhbWlseV9uYW1lIjoiQ2hhbmdlc2N1IiwibmFtZSI6IkJhcmJhcmEgQWxnZ2VlZGJnY2JlYyBDaGFuZ2VzY3UiLCJlbWFpbCI6ImhhZHFramJ4dnBfMTY0MzYzOTk2MkB0ZmJudy5uZXQiLCJpZHAiOiJmYWNlYm9vay5jb20iLCJleHRlbnNpb25fYXR0Q29kZVMiOiIyNiIsImV4dGVuc2lvbl9hdHRGYWN0IjoiIHggXHUwMDNlPSAyMCAiLCJleHRlbnNpb25fYXR0Q2hlY2tlZCI6ZmFsc2UsInRpZCI6ImY3NmIzOTRiLTFhOTMtNGM4MS1hN2IxLTkyOWEwNDZkNjlhYyJ9.dw7O9juXjbR_lPj0Nn7J9luuM3H93UuH_S8Yl8vKC7elk4a98S1PNSRGDBUApGDRzVZVeoA73IuAOk2xmH4NBEXtdVpJ2-7adGNdyFiwilwAQWwiZkRPgH2-kbVzEe8XFO2xNxMy5zt40kTgh7_HUGb4ubv5LJxiwjKWo3T--oPTXwZSw27fj4Vs4neJDiBIEzQiFtO5yl5BbxyanfiorYpRVFOA5GRu5egjaVW-1uh7vKz0MpFyawH55J3g5NSBjVAy1azF2t6FaEUUQZvT7Fj7GfRy2cHWY643Vqqr-RD8BgOgoqjJaNDon7G94DmBvrAlHL4K0Z6n_hwnCeubCA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/b2c/stepup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"b2c",
+								"stepup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "List Ext Attibutes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/b2c/users/custom-attributes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"b2c",
+						"users",
+						"custom-attributes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token Validation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImNVR2pLTjFaZS05Y3VvVTRqN2xnOFRrbHZhNFN4RHVKMlVQYWJaZk5vTHcifQ.eyJleHAiOjE2NTM5MjA0NTAsIm5iZiI6MTY1MzkxNjg1MCwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly90ZXN0ZW52aXJvbm1lbnRsb2dpbi5iMmNsb2dpbi5jb20vZjc2YjM5NGItMWE5My00YzgxLWE3YjEtOTI5YTA0NmQ2OWFjL3YyLjAvIiwic3ViIjoiNzJhODQ4MTAtYjA5OC00OWQ4LWI1MTQtMzI2NzBhMzVkZjFlIiwiYXVkIjoiNjYxNTg3M2QtODlmMy00ODZmLTkyNTAtYTE4MGIyMTg1YTJjIiwiYWNyIjoiYjJjXzFhX3NvY2lhbF9yZXN0X3NpZ251cF9zaWduaW4iLCJub25jZSI6ImRlZmF1bHROb25jZSIsImlhdCI6MTY1MzkxNjg1MCwiYXV0aF90aW1lIjoxNjUzOTE2ODUwLCJnaXZlbl9uYW1lIjoiQmFyYmFyYSIsImZhbWlseV9uYW1lIjoiQ2hhbmdlc2N1IiwibmFtZSI6IkJhcmJhcmEgQWxnZ2VlZGJnY2JlYyBDaGFuZ2VzY3UiLCJlbWFpbCI6ImhhZHFramJ4dnBfMTY0MzYzOTk2MkB0ZmJudy5uZXQiLCJpZHAiOiJmYWNlYm9vay5jb20iLCJleHRlbnNpb25fYXR0Q29kZVMiOiIyMiIsImV4dGVuc2lvbl9hdHRGYWN0IjoiIDE1IFx1MDAzYz0geCBcdTAwM2MgMjAgIiwiZXh0ZW5zaW9uX2F0dENoZWNrZWQiOmZhbHNlLCJ0aWQiOiJmNzZiMzk0Yi0xYTkzLTRjODEtYTdiMS05MjlhMDQ2ZDY5YWMifQ.XTAlY1xHlvYsJnsysnJaSC35qvyjTrrsPkCCiUjRkmzBkd1f8hq-NT_gQzGcdKWOr33XJvLaxAa9NxLVY5uzfznfnlIDnEw-RUkQxbpl_Gt2UgtQAqdNC5YVQUwDZXgbTLV5J6N4n2NfSjuI4HaTMbaa0XxwAcanMlAA0ZOcEfKwBLXrebgukS4Qnx10nViuwdc_oEI50DITLXPcpn_uhPVOfLwPKi4UUbQisZqMTQEghbdKxHm7XBq5l31rjJwJBb6V7UxYqAY5f71MqxfojwzhRebBSDVMFUIkNJWuayOrmwC5FNT4odSonOaTlIrnOk9OLr6GvSP-VdSIU6Mc3Q"
+				},
+				"url": {
+					"raw": "http://localhost:8080/b2c/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"b2c",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
